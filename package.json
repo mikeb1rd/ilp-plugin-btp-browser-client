@@ -1,0 +1,29 @@
+{
+  "name": "ilp-plugin-btp-browser-client",
+  "version": "0.0.1",
+  "description": "A simple client to try ilp-plugin-btp in the browser",
+  "scripts": {
+    "start": "node server.js",
+    "prepublish": "git clone https://github.com/mikeb1rd/ilp-plugin-btp.git ./node_modules/ilp-plugin-btp && cd ./node_modules/ilp-plugin-btp && npm install && cd ../../ && node ./node_modules/browserify/bin/cmd.js -t browserify-nodent main.js > bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikeb1rd/ilp-plugin-btp-browser-client.git"
+  },
+  "author": "Michael Bird",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikeb1rd/ilp-plugin-btp-browser-client/issues"
+  },
+  "homepage": "https://github.com/mikeb1rd/ilp-plugin-btp-browser-client#readme",
+  "devDependencies": {
+    "browserify": "^15.2.0",
+    "browserify-nodent": "^1.0.22",
+    "bufferutil": "^3.0.3",
+    "utf-8-validate": "^4.0.0"
+  },
+  "dependencies": {
+    "ilp-packet": "^2.1.2"
+  }
+}
