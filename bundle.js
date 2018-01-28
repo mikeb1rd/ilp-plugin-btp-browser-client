@@ -22,9 +22,7 @@ function run() {
             })).then((function ($await_2) {
                 response = $await_2;
                 console.log('client got:', IlpPacket.deserializeIlpPacket(response));
-                return client.sendMoney(10).then((function ($await_3) {
-                    return $return();
-                }).$asyncbind(this, $error), $error);
+                return $return();
             }).$asyncbind(this, $error), $error);
         }).$asyncbind(this, $error), $error);
     }).$asyncbind(this, true);
